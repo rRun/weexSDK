@@ -1,0 +1,1 @@
+../../../../../weexSDK/Classes/Component/WXVideoComponent.h

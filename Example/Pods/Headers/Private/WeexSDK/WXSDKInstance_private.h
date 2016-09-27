@@ -1,0 +1,1 @@
+../../../../../weexSDK/Classes/Model/WXSDKInstance_private.h

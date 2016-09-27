@@ -1,0 +1,47 @@
+{
+  "name": "WeexSDK",
+  "version": "0.6.0",
+  "summary": "WeexSDK Source .",
+  "description": "A framework for building Mobile cross-platform UI",
+  "homepage": "https://github.com/rRun/weexSDK",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "hexy": "hexy@cdfortis.com"
+  },
+  "source": {
+    "git": "https://github.com/rRun/weexSDK.git",
+    "tag": "0.6.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "weexSDK/Classes/**/*",
+  "xcconfig": {
+    "OTHER_LINK_FLAG": "$(inherited) -ObjC"
+  },
+  "prefix_header_file": "weexSDK/Classes/Supporting Files/WeexSDK-Prefix.pch",
+  "resources": [
+    "weexSDK/Assets/main.js",
+    "weexSDK/Assets/wx_load_error@3x.png"
+  ],
+  "user_target_xcconfig": {
+    "FRAMEWORK_SEARCH_PATHS": "'$(PODS_ROOT)/WeexSDK'"
+  },
+  "frameworks": [
+    "AVKit",
+    "CoreMedia",
+    "MediaPlayer",
+    "AVFoundation",
+    "AVKit",
+    "JavaScriptCore"
+  ],
+  "dependencies": {
+    "SocketRocket": [
+
+    ]
+  }
+}

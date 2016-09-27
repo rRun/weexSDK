@@ -1,0 +1,1 @@
+../../../../../weexSDK/Classes/Utility/WXWeakObjectWrapper.h

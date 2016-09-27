@@ -1,0 +1,1 @@
+../../../../../weexSDK/Classes/Component/WXComponent_internal.h

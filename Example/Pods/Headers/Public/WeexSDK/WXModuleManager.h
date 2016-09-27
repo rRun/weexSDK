@@ -1,0 +1,1 @@
+../../../../../weexSDK/Classes/Manager/WXModuleManager.h
