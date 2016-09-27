@@ -7,7 +7,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import <WeexSDK/WXModuleProtocol.h>
+#import "WXModuleProtocol.h"
 
 @interface WXNavigatorModule : NSObject <WXModuleProtocol>
 
