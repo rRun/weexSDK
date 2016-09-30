@@ -85,9 +85,9 @@ extern void WXPerformBlockSyncOnMainThread( void (^ _Nonnull block)());
  * @abstract swizzling methods.
  *
  */
-extern void WXSwizzleInstanceMethod(_Nonnull Class class, _Nonnull SEL original, _Nonnull SEL replaced);
+extern void WXSwizzleInstanceMethod(_Nonnull Class tempClass, _Nonnull SEL original, _Nonnull SEL replaced);
 
-extern void WXSwizzleInstanceMethodWithBlock(_Nonnull Class class, _Nonnull SEL original, _Nonnull id block, _Nonnull SEL replaced);
+extern void WXSwizzleInstanceMethodWithBlock(_Nonnull Class tempClass, _Nonnull SEL original, _Nonnull id block, _Nonnull SEL replaced);
 
 extern _Nonnull SEL WXSwizzledSelectorForSelector(_Nonnull SEL selector);
 
