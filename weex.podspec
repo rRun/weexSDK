@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'weex'
-  s.version      = "0.6.0"
+  s.version      = "0.9.4"
   s.summary      = "WeexSDK Source ."
 
 # This description is used to generate tags and improve search results.
