@@ -44,7 +44,7 @@ THE SOFTWARE.
 
 
 
-## WeexSDK
+## weex
 
 Copyright (c) 2016 hexy <hexy@cdfortis.com>
 

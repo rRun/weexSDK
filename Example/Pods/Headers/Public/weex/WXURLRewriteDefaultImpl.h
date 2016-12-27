@@ -1,0 +1,1 @@
+../../../../../weexSDK/Classes/Handler/WXURLRewriteDefaultImpl.h
