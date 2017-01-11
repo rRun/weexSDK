@@ -55,26 +55,26 @@ void WXPerformBlockOnThread(void (^ _Nonnull block)(), NSThread *thread)
     [WXUtility performBlock:block onThread:thread];
 }
 
-void WXSwizzleInstanceMethod(Class class, SEL original, SEL replaced)
+void WXSwizzleInstanceMethod(Class class_, SEL original, SEL replaced)
 {
-    Method originalMethod = class_getInstanceMethod(class, original);
-    Method newMethod = class_getInstanceMethod(class, replaced);
+    Method originalMethod = class_getInstanceMethod(class_, original);
+    Method newMethod = class_getInstanceMethod(class_, replaced);
     
-    BOOL didAddMethod = class_addMethod(class, original, method_getImplementation(newMethod), method_getTypeEncoding(newMethod));
+    BOOL didAddMethod = class_addMethod(class_, original, method_getImplementation(newMethod), method_getTypeEncoding(newMethod));
     if (didAddMethod) {
-        class_replaceMethod(class, replaced, method_getImplementation(newMethod), method_getTypeEncoding(newMethod));
+        class_replaceMethod(class_, replaced, method_getImplementation(newMethod), method_getTypeEncoding(newMethod));
     } else {
         method_exchangeImplementations(originalMethod, newMethod);
     }
 }
 
-void WXSwizzleInstanceMethodWithBlock(Class class, SEL original, id block, SEL replaced)
+void WXSwizzleInstanceMethodWithBlock(Class class_, SEL original, id block, SEL replaced)
 {
-    Method originalMethod = class_getInstanceMethod(class, original);
+    Method originalMethod = class_getInstanceMethod(class_, original);
     IMP implementation = imp_implementationWithBlock(block);
     
-    class_addMethod(class, replaced, implementation, method_getTypeEncoding(originalMethod));
-    Method newMethod = class_getInstanceMethod(class, replaced);
+    class_addMethod(class_, replaced, implementation, method_getTypeEncoding(originalMethod));
+    Method newMethod = class_getInstanceMethod(class_, replaced);
     method_exchangeImplementations(originalMethod, newMethod);
 }
 
